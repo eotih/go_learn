@@ -1,14 +1,19 @@
 package main
 
-import (
-	"fmt"
-
-	"rsc.io/quote"
-)
+import "fmt"
 
 func main() {
-	fmt.Println(quote.Glass())
+	//khởi tạo mảng cards
+	cards := []string{"Ace of Diamonds", newCard()}
+	//thêm phần tử vào mảng
+	cards = append(cards, "Six of Spades")
 
-	fmt.Println(quote.Go())
+	for i, card := range cards {
+		fmt.Println(i, card)
+	}
 
+}
+
+func newCard() string {
+	return "Five of Diamonds"
 }
